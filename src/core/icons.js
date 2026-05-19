@@ -6,6 +6,7 @@
  * 自定义图标加载表
  * 所有图标均从这里加载，方便管理
  */
-import bxAnaalyse from '@/assets/icons/bx-analyse.svg?inline' // path to your '*.svg?inline' file.
+// vite-svg-loader: `?component` 返回 Vue 组件（Vue 2.7）
+import bxAnaalyse from '@/assets/icons/bx-analyse.svg?component'
 
 export { bxAnaalyse }

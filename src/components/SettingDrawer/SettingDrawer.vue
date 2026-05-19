@@ -40,7 +40,8 @@
           </div>
         </div>
 
-        <div :style="{ marginBottom: '24px' }">
+        <!-- 主色切换：webpack-theme-color-replacer 已下线，主色固定在构建期，隐藏入口 -->
+        <div :style="{ marginBottom: '24px', display: 'none' }">
           <h3 class="setting-drawer-index-title">{{ $t('app.setting.themecolor') }}</h3>
 
           <div style="height: 20px">

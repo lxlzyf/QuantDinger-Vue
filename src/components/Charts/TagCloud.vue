@@ -8,7 +8,7 @@
 
 <script>
 import { registerShape } from 'viser-vue'
-const DataSet = require('@antv/data-set')
+import DataSet from '@antv/data-set'
 
 const imgUrl = 'https://gw.alipayobjects.com/zos/rmsportal/gWyeGLCdFFRavBGIDzWk.png'
 

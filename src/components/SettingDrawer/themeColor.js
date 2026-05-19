@@ -1,36 +1,11 @@
-import client from 'webpack-theme-color-replacer/client'
-import generate from '@ant-design/colors/lib/generate'
-
+// 主色运行时换肤功能已下线（原依赖 webpack-theme-color-replacer，已随 Vite 迁移移除）。
+// 当前主色由 vite.config.js 的 less modifyVars 在构建期固定。
+// 此文件保留兼容导出，避免 SettingDrawer 引用断裂。
 export default {
-  getAntdSerials (color) {
-    // 淡化（即less的tint）
-    const lightens = new Array(9).fill().map((t, i) => {
-      return client.varyColor.lighten(color, i / 10)
-    })
-    // colorPalette变换得到颜色值
-    const colorPalettes = generate(color)
-    const rgb = client.varyColor.toNum3(color.replace('#', '')).join(',')
-    return lightens.concat(colorPalettes).concat(rgb)
+  getAntdSerials () {
+    return []
   },
-  changeColor (newColor) {
-    // Check if client.changer is available (plugin might not be loaded in some build configs)
-    if (!client || !client.changer || typeof client.changer.changeColor !== 'function') {
-      // Return a resolved promise to avoid breaking the calling code
-      return Promise.resolve()
-    }
-
-    var options = {
-      newColors: this.getAntdSerials(newColor), // new colors array, one-to-one corresponde with `matchColors`
-      changeUrl (cssUrl) {
-        return `/${cssUrl}` // while router is not `hash` mode, it needs absolute path
-      }
-    }
-
-    try {
-      return client.changer.changeColor(options, Promise)
-    } catch (error) {
-      // Return a resolved promise to avoid breaking the calling code
-      return Promise.resolve()
-    }
+  changeColor () {
+    return Promise.resolve()
   }
 }
