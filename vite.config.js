@@ -97,6 +97,9 @@ export default defineConfig(({ mode }) => {
       target: 'es2020',
       sourcemap: false,
       chunkSizeWarningLimit: 1500,
+      commonjsOptions: {
+        transformMixedEsModules: true
+      },
       rollupOptions: {
         output: {
           manualChunks: {
