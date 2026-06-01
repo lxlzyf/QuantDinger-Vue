@@ -304,6 +304,8 @@ const locale = {
   'trading-bot.detail.shortLeg': '空腿仓位',
   'trading-bot.detail.totalGridProfit': '网格配对总利润',
   'trading-bot.detail.matchedPairs': '已配对笔数',
+  'trading-bot.detail.noLegPosition': '暂无持仓',
+  'trading-bot.detail.tickInterval': '轮询间隔',
   'trading-bot.detail.restingOrdersEmpty': '暂无未成交的预挂限价单',
   'trading-bot.detail.restingOrdersStopped': '启动机器人后可查看交易所预挂限价单',
   'trading-bot.detail.restingOrderCell': '格位',

@@ -282,6 +282,7 @@ const locale = {
   'trading-bot.detail.shortLeg': 'Short Leg',
   'trading-bot.detail.totalGridProfit': 'Realised Grid Profit',
   'trading-bot.detail.matchedPairs': 'Matched Pairs',
+  'trading-bot.detail.noLegPosition': 'Flat',
   'trading-bot.detail.tickInterval': 'Loop Interval',
   'trading-bot.detail.restingOrdersEmpty': 'No open resting limit orders',
   'trading-bot.detail.restingOrdersStopped': 'Start the bot to see live resting orders on the exchange',
